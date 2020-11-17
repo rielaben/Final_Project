@@ -50,6 +50,7 @@ def table_set_up(data, conn, cur, city_name):
         longitude = restaurant['coordinates']['longitude']
         latitude = restaurant['coordinates']['latitude']
         type_of_food = restaurant['categories'][0]['title']
+        #ben comment
         cur.execute(f'INSERT INTO {city_name} (id_num, name, food_type, rating, longitude, latitude) VALUES ({id_num}, {name}, {type_of_food}, {rating}, {longitude}, {latitude})')
     conn.commit()
 
